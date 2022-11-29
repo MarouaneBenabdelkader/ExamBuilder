@@ -43,16 +43,27 @@ namespace ExamBuilder
             specialite = Txt;
         }
 
-        
-
-        public void InserExamData(Examen datas)
+        public string getTitre()
         {
-            connection connecton = new connection();
-            connection.cmd.Connection = connection.conx;
-            connection.cmd.CommandText = "insert into examen(titre,heure_debut,heure_fin,specialite) values ('" + datas.titre + "','" + datas.heureDebut + "','" + datas.heureFin + "','" + datas.specialite + "')";
-            connection.cmd.ExecuteNonQuery();
-            connection.conx.Close();
+            return titre;
         }
-        
+
+        public string getHeureDebut()
+        {
+            return heureDebut;
+        }
+
+        public string getHeureFin()
+        {
+            return heureFin;
+        }
+
+        public string getspecialite()
+        {
+            return specialite;
+        }
+
+
+
     }
 }

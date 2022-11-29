@@ -30,7 +30,8 @@ namespace ExamBuilder
                 examen.setSpecialite(TxtBox2.Text);
                 examen.setHeureFin(Timepicker2.Value.ToString("hh:mm:ss"));
                 examen.setHeureDebut(Timepicker1.Value.ToString("hh:mm:ss"));
-                examen.InserExamData(examen);
+                connection conx = new connection();
+                conx.insertExamInfo(examen);
                 this.Hide();
                 Form2 f2 = new Form2();
                 f2.Show();
